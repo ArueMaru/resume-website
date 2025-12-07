@@ -1,11 +1,12 @@
 body {
-    background-image: url('/pics/layered-waves-haikei\(1\).svg');
+    background-image: url('/pics/layered-waves-haikei(1).svg');
     background-color: #090909;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     color: #eee;
     font-family: Arial, sans-serif;
+    margin: 0; /* Resets default browser margin */
 }
 
 .container {
@@ -16,13 +17,15 @@ body {
     gap: 20px;
 }
 
-/* LEFT SIDEBAR */
+/* --- SIDEBAR --- */
 .sidebar {
     background: #111315;
     padding: 20px;
     width: 300px;
     border-radius: 12px;
     text-align: center;
+    /* Prevent sidebar from shrinking on desktop */
+    flex-shrink: 0; 
 }
 
 .profile-photo {
@@ -33,16 +36,11 @@ body {
     margin-bottom: 15px;
 }
 
-.status {
-    display: inline-block;
-    padding: 6px 12px;
-    background: #1f1f1f;
-    border-radius: 8px;
-    margin: 10px 0;
+.social-links {
+    margin: 15px 0;
 }
 
-/* Buttons */
-.btn {
+.buttons .btn {
     display: inline-block;
     margin-top: 10px;
     padding: 10px 16px;
@@ -52,20 +50,20 @@ body {
     color: white;
 }
 
-.btn-green {
-    background: #00A0FF ;
+.buttons .btn-green {
+    background: #00A0FF;
 }
 
-/* MAIN CONTENT */
+/* --- MAIN CONTENT --- */
 .content {
-    flex: 1;
+    flex: 1; /* Takes up remaining space */
     background: #111315;
     padding: 20px;
     border-radius: 12px;
 }
 
 .highlight {
-    color: #00A0FF  ;
+    color: #00A0FF;
     font-weight: bold;
 }
 
@@ -79,7 +77,7 @@ body {
     text-align: center;
 }
 
-/* Experience cards */
+/* --- EXPERIENCE CARDS --- */
 .exp-card {
     background: #1a1d1f;
     padding: 15px;
@@ -87,19 +85,32 @@ body {
     margin-bottom: 15px;
 }
 
+.grouper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.college-logo {
+    height: 30px;
+    width: 30px;
+    border-radius: 5px;
+    object-fit: contain; /* Ensures logo isn't squashed */
+}
+
 /* --- RESPONSIVENESS (Media Query) --- */
+/* This MUST be at the very end of the file */
 @media (max-width: 768px) {
-    /* Stack the sidebar and content vertically */
+    
     .container {
-        flex-direction: column;
+        flex-direction: column; /* Stacks Sidebar on top of Content */
     }
 
-    /* Allow the sidebar to take up full width */
     .sidebar {
-        width: auto;
+        width: auto; /* Lets sidebar fill the screen width */
+        flex-shrink: 1;
     }
 
-    /* Stack the stats vertically for small screens */
     .stats {
         flex-direction: column;
         align-items: center;
