@@ -1,9 +1,9 @@
 body {
     background-image: url('/pics/layered-waves-haikei\(1\).svg');
     background-color: #090909;
-    background-repeat: no-repeat; /* Optional: adjust as needed */
-    background-position: center; /* Optional: adjust as needed */
-    background-size: cover; /* Optional: adjust as needed */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     color: #eee;
     font-family: Arial, sans-serif;
 }
@@ -85,4 +85,23 @@ body {
     padding: 15px;
     border-radius: 10px;
     margin-bottom: 15px;
+}
+
+/* --- RESPONSIVENESS (Media Query) --- */
+@media (max-width: 768px) {
+    /* Stack the sidebar and content vertically */
+    .container {
+        flex-direction: column;
+    }
+
+    /* Allow the sidebar to take up full width */
+    .sidebar {
+        width: auto;
+    }
+
+    /* Stack the stats vertically for small screens */
+    .stats {
+        flex-direction: column;
+        align-items: center;
+    }
 }
