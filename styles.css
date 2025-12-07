@@ -77,6 +77,8 @@ body {
     text-align: center;
 }
 
+
+
 /* --- EXPERIENCE CARDS --- */
 .exp-card {
     background: #1a1d1f;
@@ -91,9 +93,9 @@ body {
     gap: 10px;
 }
 
-.college-logo {
-    height: 30px;
-    width: 30px;
+.logo {
+    height: 35px;
+    width: 35px;
     border-radius: 5px;
     object-fit: contain; /* Ensures logo isn't squashed */
 }
