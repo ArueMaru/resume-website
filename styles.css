@@ -66,6 +66,21 @@ body {
 }
 
 /* --- MAIN CONTENT --- */
+
+.hello-icon {
+    width: 24px;
+    height: 24px;
+    margin-left: 8px;   /* spacing between text and icon */
+    vertical-align: middle;
+    stroke: #ffffff;    /* matches your highlight blue */
+}
+
+.hero h3 {
+    display: flex;
+    align-items: center;
+    gap: 5px;           /* ensures consistent spacing */
+}
+
 .content {
     flex: 1; /* Takes up remaining space */
     padding: 20px;
@@ -90,6 +105,18 @@ body {
 
 
 /* --- EXPERIENCE CARDS --- */
+.edu-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+.experience h2 {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* space between icon and text */
+}
+
 .exp-card {
     background: #1a1d1f;
     padding: 1px 15px 15px 15px;
