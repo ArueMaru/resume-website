@@ -51,9 +51,26 @@ body {
     margin-bottom: 15px;
 }
 
-.social-links {
-    margin: 15px 0;
+.social-links a {
+    margin: 0 5px;
+    text-decoration: none;
+    color: inherit;
 }
+
+.social-logo {
+    width: 28px;               /* Slightly larger for better visibility */
+    height: 28px;
+    object-fit: contain;       /* Prevents distortion */
+    vertical-align: middle;
+    display: inline-block;
+    border-radius: 4px;
+}
+
+.social-links a[href*="github.com"] img {
+    transform: scale(1.3);     /* Slight boost to match visual weight */
+}
+
+
 
 .buttons .btn {
     display: inline-block;
@@ -67,6 +84,22 @@ body {
 
 .buttons .btn-green {
     background: #00A0FF;
+}
+
+/* General button hover */
+.buttons .btn:hover {
+    background: #333;           /* darker background */
+    color: #00A0FF;             /* highlight text color */
+    transform: scale(1.05);     /* subtle grow effect */
+    transition: all 0.2s ease;  /* smooth animation */
+}
+
+/* Green button hover */
+.buttons .btn-green:hover {
+    background: #0080cc;        /* slightly darker blue */
+    color: #fff;                /* keep text white */
+    transform: scale(1.05);
+    transition: all 0.2s ease;
 }
 
 /* --- MAIN CONTENT --- */
@@ -132,6 +165,12 @@ body {
     padding: 1px 15px 15px 15px;
     border-radius: 10px;
     margin-bottom: 15px;
+}
+
+.exp-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
 }
 
 .grouper {
