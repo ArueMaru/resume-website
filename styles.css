@@ -14,6 +14,16 @@ body {
     /* Resets default browser margin */
 }
 
+h2 {
+  transition: transform 0.2s ease, color 0.2s ease;
+  cursor: pointer;
+}
+
+h2:hover {
+  transform: scale(1.05);
+  color: #00A0FF; /* highlight blue */
+}
+
 #bg-video {
     position: fixed;
     /* stays in place while scrolling */
