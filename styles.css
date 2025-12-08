@@ -92,7 +92,7 @@ body {
 /* --- EXPERIENCE CARDS --- */
 .exp-card {
     background: #1a1d1f;
-    padding: 15px;
+    padding: 1px 15px 15px 15px;
     border-radius: 10px;
     margin-bottom: 15px;
 }
