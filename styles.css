@@ -37,6 +37,30 @@ h2:hover {
     /* behind all content */
 }
 
+/* Base styling for name*/
+#name {
+  cursor: pointer; /* shows hand pointer to indicate it's clickable */
+  transition: color 0.3s ease, transform 0.3s ease; /* smooth changes */
+}
+
+/* Hover effect */
+#name:hover {
+  color: #00A0FF; /* highlight blue when hovered */
+}
+
+/* Clicked state */
+#name.clicked {
+  animation: pulse 0.6s ease; /* triggers pulse animation */
+  color: #FF5722; /* temporary color change while clicked */
+}
+
+/* Pulse animation definition */
+@keyframes pulse {
+  0% { transform: scale(1); }       /* normal size */
+  50% { transform: scale(1.1); }    /* slightly bigger */
+  100% { transform: scale(1); }     /* back to normal */
+}
+
 .container {
     display: flex;
     max-width: 1200px;
