@@ -100,6 +100,10 @@ body {
     object-fit: contain; /* Ensures logo isn't squashed */
 }
 
+.social-logo {
+    
+}
+
 /* --- RESPONSIVENESS (Media Query) --- */
 /* This MUST be at the very end of the file */
 @media (max-width: 768px) {
