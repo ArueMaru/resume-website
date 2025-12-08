@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
     /* background-image: url('/pics/layered-waves-haikei(1).svg');
     background-color: #090909;
@@ -246,6 +250,35 @@ body {
     transform: scale(1.1);
     border-color: #00A0FF; /* highlight blue */
 }
+
+
+/*-----ANIMATION-----*/
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+#hello-text.animate {
+  animation: bounce 0.6s ease;
+  color: #00A0FF; /* highlight blue for effect */
+}
+
+#hello-text {
+  cursor: pointer; /* shows hand pointer on hover */
+}
+
+#hello-text.animate {
+  cursor: crosshair; /* changes pointer while animation runs */
+}
+
+
+
 
 /* --- RESPONSIVENESS (Media Query) --- */
 /* This MUST be at the very end of the file */
