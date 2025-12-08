@@ -205,7 +205,7 @@ h2:hover {
 }
 
 .exp-card {
-    background: #1a1d1f;
+    background: #111315;
     padding: 1px 15px 15px 15px;
     border-radius: 10px;
     margin-bottom: 15px;
@@ -310,7 +310,13 @@ h2:hover {
 }
 
 #hello-text {
-  cursor: pointer; /* shows hand pointer on hover */
+  cursor: pointer;
+  transition: text-shadow 0.3s ease, color 0.3s ease;
+}
+
+#hello-text:hover {
+  color: #00A0FF; /* optional color shift */
+  text-shadow: 0 0 6px rgba(0, 160, 255, 0.7); /* subtle blue glow */
 }
 
 #hello-text.animate {
