@@ -10,6 +10,12 @@ hello.addEventListener('click', () => {
   }, 600);
 });
 
+
+
+
+
+
+
 // Target the <h2> element with id="name"
 const nameEl = document.getElementById('name');
 nameEl.addEventListener('click', () => {
