@@ -1,18 +1,28 @@
 body {
-    background-image: url('/pics/layered-waves-haikei(1).svg');
+    /* background-image: url('/pics/layered-waves-haikei(1).svg');
     background-color: #090909;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: cover; */
     color: #eee;
     font-family: Arial, sans-serif;
     margin: 0; /* Resets default browser margin */
 }
 
+#bg-video {
+    position: fixed;       /* stays in place while scrolling */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;     /* fills screen without distortion */
+    z-index: -1;           /* behind all content */
+}
+
 .container {
     display: flex;
     max-width: 1200px;
-    margin: auto;
+    margin: 30px auto auto auto;
     padding: 20px;
     gap: 20px;
 }
@@ -21,6 +31,7 @@ body {
 .sidebar {
     background: #111315;
     padding: 20px;
+    height: 370px;
     width: 300px;
     border-radius: 12px;
     text-align: center;
@@ -57,7 +68,6 @@ body {
 /* --- MAIN CONTENT --- */
 .content {
     flex: 1; /* Takes up remaining space */
-    background: #111315;
     padding: 20px;
     border-radius: 12px;
 }
@@ -98,10 +108,6 @@ body {
     width: 35px;
     border-radius: 5px;
     object-fit: contain; /* Ensures logo isn't squashed */
-}
-
-.social-logo {
-    
 }
 
 /* --- RESPONSIVENESS (Media Query) --- */
