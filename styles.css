@@ -134,24 +134,19 @@ h2 span:hover {
 }
 
 .profile-photo {
-    width: 120px;
-    height: 120px;
-    border-radius: 12px;
-    object-fit: cover;
-    margin-bottom: 15px;
+  width: 200px;          /* keep consistent size */
+  height: 200px;
+  border-radius: 50%;    /* circular crop */
+  object-fit: cover;
+  transition: box-shadow 0.4s ease, transform 0.3s ease;
 }
 
-.pixelate {
-    transition: transform 0.4s ease, filter 0.4s ease;
-    cursor: pointer;
+/* Glow on hover */
+.profile-photo:hover {
+  box-shadow: 0 0 20px 5px rgba(0, 160, 255, 0.7); /* blue glow */
+  transform: scale(1.05); /* slight zoom for emphasis */
 }
 
-/* Hover pixelation effect */
-.pixelate:hover {
-    transform: scale(1.05); /* slight zoom */
-    image-rendering: pixelated;
-    filter: contrast(150%) saturate(120%);
-}
 
 
 /* ===========================
