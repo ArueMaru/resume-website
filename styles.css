@@ -2,7 +2,8 @@
    GLOBAL SETTINGS
    =========================== */
 html {
-    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+    scroll-behavior: smooth;
+    /* Smooth scrolling for anchor links */
 }
 
 body {
@@ -12,36 +13,53 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover; */
-    
+
     color: #eee;
     font-family: Arial, sans-serif;
-    margin: 0; /* Reset default browser margin */
+    margin: 0;
+    /* Reset default browser margin */
 }
 
 /* ===========================
    HEADINGS
    =========================== */
-h2 {
+h2 span {
+    transition: color 0.2s ease;
     cursor: pointer;
-    transition: transform 0.2s ease, color 0.2s ease;
+    display: flex;
 }
 
-h2:hover {
-    transform: scale(1.05);
-    color: #00A0FF; /* Highlight blue */
+h2 span:hover {
+    color: #00A0FF;
 }
+
+/* Title hover effect (same as exp-card) */
+.title-text {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.title-text:hover {
+    color: #00A0FF; /* highlight blue */
+    transform: translateY(-5px);
+    border-radius: 6px; /* optional: rounds edges for glow */
+}
+
 
 /* ===========================
    BACKGROUND VIDEO
    =========================== */
 #bg-video {
-    position: fixed;   /* Stays in place while scrolling */
+    position: fixed;
+    /* Stays in place while scrolling */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Fill screen without distortion */
-    z-index: -1;       /* Behind all content */
+    object-fit: cover;
+    /* Fill screen without distortion */
+    z-index: -1;
+    /* Behind all content */
 }
 
 /* ===========================
@@ -53,19 +71,30 @@ h2:hover {
 }
 
 #name:hover {
-    color: #00A0FF; /* Highlight blue */
+    color: #00A0FF;
+    /* Highlight blue */
 }
 
 #name.clicked {
-    animation: pulse 0.6s ease; /* Trigger pulse animation */
-    color: #FF5722;             /* Temporary color change */
+    animation: pulse 0.6s ease;
+    /* Trigger pulse animation */
+    color: #FF5722;
+    /* Temporary color change */
 }
 
 /* Pulse animation */
 @keyframes pulse {
-    0%   { transform: scale(1); }
-    50%  { transform: scale(1.1); }
-    100% { transform: scale(1); }
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 /* ===========================
@@ -93,7 +122,15 @@ h2:hover {
 
     /* Sticky behavior on desktop */
     position: sticky;
-    top: 20px; /* Distance from top when scrolling */
+    top: 20px;
+    /* Distance from top when scrolling */
+
+    transition: all 0.3s ease;
+}
+
+.sidebar:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 .profile-photo {
@@ -168,7 +205,8 @@ h2:hover {
    MAIN CONTENT
    =========================== */
 .content {
-    flex: 1; /* Fill remaining space */
+    flex: 1;
+    /* Fill remaining space */
     padding: 20px;
     border-radius: 12px;
 }
@@ -294,13 +332,25 @@ h2:hover {
    ANIMATIONS
    =========================== */
 @keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50%      { transform: translateY(-10px); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
 }
 
 @keyframes spin {
-    from { transform: rotate(0deg); }
-    to   { transform: rotate(360deg); }
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 #hello-text {
@@ -316,7 +366,8 @@ h2:hover {
 #hello-text.animate {
     animation: bounce 0.6s ease;
     color: #00A0FF;
-    cursor: crosshair; /* Fun pointer change during animation */
+    cursor: crosshair;
+    /* Fun pointer change during animation */
 }
 
 /* ===========================
@@ -324,11 +375,13 @@ h2:hover {
    =========================== */
 @media (max-width: 768px) {
     .container {
-        flex-direction: column; /* Stack sidebar above content */
+        flex-direction: column;
+        /* Stack sidebar above content */
     }
 
     .sidebar {
-        position: static; /* Remove sticky on mobile */
+        position: static;
+        /* Remove sticky on mobile */
         width: auto;
         height: auto;
         flex-shrink: 1;
