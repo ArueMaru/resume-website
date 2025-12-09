@@ -1,93 +1,87 @@
+/* ===========================
+   GLOBAL SETTINGS
+   =========================== */
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
 }
 
 body {
-    /* background-image: url('/pics/layered-waves-haikei(1).svg');
+    /* Optional background image
+    background-image: url('/pics/layered-waves-haikei(1).svg');
     background-color: #090909;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover; */
+    
     color: #eee;
     font-family: Arial, sans-serif;
-    margin: 0;
-    /* Resets default browser margin */
+    margin: 0; /* Reset default browser margin */
 }
 
+/* ===========================
+   HEADINGS
+   =========================== */
 h2 {
-    transition: transform 0.2s ease, color 0.2s ease;
     cursor: pointer;
+    transition: transform 0.2s ease, color 0.2s ease;
 }
 
 h2:hover {
     transform: scale(1.05);
-    color: #00A0FF;
-    /* highlight blue */
+    color: #00A0FF; /* Highlight blue */
 }
 
+/* ===========================
+   BACKGROUND VIDEO
+   =========================== */
 #bg-video {
-    position: fixed;
-    /* stays in place while scrolling */
+    position: fixed;   /* Stays in place while scrolling */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    /* fills screen without distortion */
-    z-index: -1;
-    /* behind all content */
+    object-fit: cover; /* Fill screen without distortion */
+    z-index: -1;       /* Behind all content */
 }
 
-/* Base styling for name*/
+/* ===========================
+   NAME HEADER INTERACTION
+   =========================== */
 #name {
     cursor: pointer;
-    /* shows hand pointer to indicate it's clickable */
     transition: color 0.3s ease, transform 0.3s ease;
-    /* smooth changes */
 }
 
-/* Hover effect */
 #name:hover {
-    color: #00A0FF;
-    /* highlight blue when hovered */
+    color: #00A0FF; /* Highlight blue */
 }
 
-/* Clicked state */
 #name.clicked {
-    animation: pulse 0.6s ease;
-    /* triggers pulse animation */
-    color: #FF5722;
-    /* temporary color change while clicked */
+    animation: pulse 0.6s ease; /* Trigger pulse animation */
+    color: #FF5722;             /* Temporary color change */
 }
 
-/* Pulse animation definition */
+/* Pulse animation */
 @keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-
-    /* normal size */
-    50% {
-        transform: scale(1.1);
-    }
-
-    /* slightly bigger */
-    100% {
-        transform: scale(1);
-    }
-
-    /* back to normal */
+    0%   { transform: scale(1); }
+    50%  { transform: scale(1.1); }
+    100% { transform: scale(1); }
 }
 
+/* ===========================
+   LAYOUT CONTAINER
+   =========================== */
 .container {
     display: flex;
     max-width: 1200px;
-    margin: 30px auto auto auto;
+    margin: 30px auto;
     padding: 20px;
     gap: 20px;
 }
 
-/* --- SIDEBAR --- */
+/* ===========================
+   SIDEBAR
+   =========================== */
 .sidebar {
     background: #111315;
     padding: 20px;
@@ -95,8 +89,11 @@ h2:hover {
     width: 300px;
     border-radius: 12px;
     text-align: center;
-    /* Prevent sidebar from shrinking on desktop */
     flex-shrink: 0;
+
+    /* Sticky behavior on desktop */
+    position: sticky;
+    top: 20px; /* Distance from top when scrolling */
 }
 
 .profile-photo {
@@ -107,6 +104,9 @@ h2:hover {
     margin-bottom: 15px;
 }
 
+/* ===========================
+   SOCIAL LINKS
+   =========================== */
 .social-links a {
     margin: 0 5px;
     text-decoration: none;
@@ -115,25 +115,27 @@ h2:hover {
 
 .social-logo {
     height: 30px;
-    vertical-align: middle;
     display: inline-block;
+    vertical-align: middle;
     border-radius: 4px;
     transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-/* Hover for LinkedIn */
+/* LinkedIn hover */
 .social-links a[href*="linkedin.com"]:hover .social-logo {
     transform: scale(1.2);
     filter: brightness(1.2) drop-shadow(0 0 5px #0080cc);
 }
 
-/* Hover for GitHub */
+/* GitHub hover */
 .social-links a[href*="github.com"]:hover .social-logo {
     transform: scale(1.2);
     filter: brightness(1.2) drop-shadow(0 0 5px #00A0FF);
 }
 
-
+/* ===========================
+   BUTTONS
+   =========================== */
 .buttons .btn {
     display: inline-block;
     margin-top: 10px;
@@ -141,59 +143,48 @@ h2:hover {
     background: #222;
     border-radius: 8px;
     text-decoration: none;
-    color: white;
+    color: #fff;
+    transition: all 0.2s ease;
 }
 
 .buttons .btn-green {
     background: #00A0FF;
 }
 
-/* General button hover */
+/* Hover effects */
 .buttons .btn:hover {
     background: #333;
-    /* darker background */
     color: #00A0FF;
-    /* highlight text color */
     transform: scale(1.05);
-    /* subtle grow effect */
-    transition: all 0.2s ease;
-    /* smooth animation */
 }
 
-/* Green button hover */
 .buttons .btn-green:hover {
     background: #0080cc;
-    /* slightly darker blue */
     color: #fff;
-    /* keep text white */
     transform: scale(1.05);
-    transition: all 0.2s ease;
 }
 
-/* --- MAIN CONTENT --- */
-
-.hello-icon {
-    width: 24px;
-    height: 24px;
-    margin-left: 8px;
-    /* spacing between text and icon */
-    vertical-align: middle;
-    stroke: #ffffff;
-    /* matches your highlight blue */
+/* ===========================
+   MAIN CONTENT
+   =========================== */
+.content {
+    flex: 1; /* Fill remaining space */
+    padding: 20px;
+    border-radius: 12px;
 }
 
 .hero h3 {
     display: flex;
     align-items: center;
     gap: 5px;
-    /* ensures consistent spacing */
 }
 
-.content {
-    flex: 1;
-    /* Takes up remaining space */
-    padding: 20px;
-    border-radius: 12px;
+.hello-icon {
+    width: 24px;
+    height: 24px;
+    margin-left: 8px;
+    vertical-align: middle;
+    stroke: #fff;
 }
 
 .highlight {
@@ -201,6 +192,7 @@ h2:hover {
     font-weight: bold;
 }
 
+/* Stats section */
 .stats {
     display: flex;
     gap: 30px;
@@ -211,34 +203,20 @@ h2:hover {
     text-align: center;
 }
 
-
-
-/* --- EXPERIENCE CARDS --- */
-.edu-icon {
-    width: 24px;
-    height: 24px;
-    margin-right: 5px;
-    vertical-align: middle;
-}
-
-.experience h2 {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    /* space between icon and text */
-}
-
+/* ===========================
+   EXPERIENCE CARDS
+   =========================== */
 .exp-card {
     background: #111315;
-    padding: 1px 15px 15px 15px;
+    padding: 1px 15px 15px;
     border-radius: 10px;
     margin-bottom: 15px;
+    transition: all 0.3s ease;
 }
 
 .exp-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
 }
 
 .grouper {
@@ -252,22 +230,16 @@ h2:hover {
     width: 35px;
     border-radius: 5px;
     object-fit: contain;
-    /* Ensures logo isn't squashed */
 }
 
+/* Icons */
+.edu-icon,
 .exp-icon {
     width: 24px;
     height: 24px;
     margin-right: 5px;
     vertical-align: middle;
-    stroke: #ffffff;
-    /* highlight blue */
-}
-
-.experience h2 {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+    stroke: #fff;
 }
 
 .cert-icon {
@@ -275,8 +247,7 @@ h2:hover {
     height: 30px;
     margin-right: 1px;
     vertical-align: middle;
-    stroke: #ffffff;
-    /* highlight blue */
+    stroke: #fff;
 }
 
 .experience h2 {
@@ -285,6 +256,7 @@ h2:hover {
     gap: 8px;
 }
 
+/* Project list */
 .project-list {
     margin: 10px 0 0 20px;
     color: #ccc;
@@ -296,11 +268,12 @@ h2:hover {
     margin-bottom: 6px;
 }
 
+/* Homelab gallery */
 .homelab-gallery {
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
     margin-top: 15px;
-    flex-wrap: wrap;
 }
 
 .homelab-gallery img {
@@ -315,38 +288,19 @@ h2:hover {
 .homelab-gallery img:hover {
     transform: scale(1.1);
     border-color: #00A0FF;
-    /* highlight blue */
 }
 
-
-/*-----ANIMATION-----*/
-
+/* ===========================
+   ANIMATIONS
+   =========================== */
 @keyframes bounce {
-
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-10px);
-    }
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-10px); }
 }
 
 @keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-#hello-text.animate {
-    animation: bounce 0.6s ease;
-    color: #00A0FF;
-    /* highlight blue for effect */
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
 }
 
 #hello-text {
@@ -356,31 +310,27 @@ h2:hover {
 
 #hello-text:hover {
     color: #00A0FF;
-    /* optional color shift */
     text-shadow: 0 0 6px rgba(0, 160, 255, 0.7);
-    /* subtle blue glow */
 }
 
 #hello-text.animate {
-    cursor: crosshair;
-    /* changes pointer while animation runs */
+    animation: bounce 0.6s ease;
+    color: #00A0FF;
+    cursor: crosshair; /* Fun pointer change during animation */
 }
 
-
-
-
-/* --- RESPONSIVENESS (Media Query) --- */
-/* This MUST be at the very end of the file */
+/* ===========================
+   RESPONSIVENESS
+   =========================== */
 @media (max-width: 768px) {
-
     .container {
-        flex-direction: column;
-        /* Stacks Sidebar on top of Content */
+        flex-direction: column; /* Stack sidebar above content */
     }
 
     .sidebar {
+        position: static; /* Remove sticky on mobile */
         width: auto;
-        /* Lets sidebar fill the screen width */
+        height: auto;
         flex-shrink: 1;
     }
 
