@@ -1,5 +1,5 @@
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -15,13 +15,14 @@ body {
 }
 
 h2 {
-  transition: transform 0.2s ease, color 0.2s ease;
-  cursor: pointer;
+    transition: transform 0.2s ease, color 0.2s ease;
+    cursor: pointer;
 }
 
 h2:hover {
-  transform: scale(1.05);
-  color: #00A0FF; /* highlight blue */
+    transform: scale(1.05);
+    color: #00A0FF;
+    /* highlight blue */
 }
 
 #bg-video {
@@ -39,26 +40,43 @@ h2:hover {
 
 /* Base styling for name*/
 #name {
-  cursor: pointer; /* shows hand pointer to indicate it's clickable */
-  transition: color 0.3s ease, transform 0.3s ease; /* smooth changes */
+    cursor: pointer;
+    /* shows hand pointer to indicate it's clickable */
+    transition: color 0.3s ease, transform 0.3s ease;
+    /* smooth changes */
 }
 
 /* Hover effect */
 #name:hover {
-  color: #00A0FF; /* highlight blue when hovered */
+    color: #00A0FF;
+    /* highlight blue when hovered */
 }
 
 /* Clicked state */
 #name.clicked {
-  animation: pulse 0.6s ease; /* triggers pulse animation */
-  color: #FF5722; /* temporary color change while clicked */
+    animation: pulse 0.6s ease;
+    /* triggers pulse animation */
+    color: #FF5722;
+    /* temporary color change while clicked */
 }
 
 /* Pulse animation definition */
 @keyframes pulse {
-  0% { transform: scale(1); }       /* normal size */
-  50% { transform: scale(1.1); }    /* slightly bigger */
-  100% { transform: scale(1); }     /* back to normal */
+    0% {
+        transform: scale(1);
+    }
+
+    /* normal size */
+    50% {
+        transform: scale(1.1);
+    }
+
+    /* slightly bigger */
+    100% {
+        transform: scale(1);
+    }
+
+    /* back to normal */
 }
 
 .container {
@@ -105,13 +123,13 @@ h2:hover {
 
 /* Hover for LinkedIn */
 .social-links a[href*="linkedin.com"]:hover .social-logo {
-    transform: scale(1.2); 
+    transform: scale(1.2);
     filter: brightness(1.2) drop-shadow(0 0 5px #0080cc);
 }
 
 /* Hover for GitHub */
 .social-links a[href*="github.com"]:hover .social-logo {
-    transform: scale(1.2); 
+    transform: scale(1.2);
     filter: brightness(1.2) drop-shadow(0 0 5px #00A0FF);
 }
 
@@ -132,16 +150,22 @@ h2:hover {
 
 /* General button hover */
 .buttons .btn:hover {
-    background: #333;           /* darker background */
-    color: #00A0FF;             /* highlight text color */
-    transform: scale(1.05);     /* subtle grow effect */
-    transition: all 0.2s ease;  /* smooth animation */
+    background: #333;
+    /* darker background */
+    color: #00A0FF;
+    /* highlight text color */
+    transform: scale(1.05);
+    /* subtle grow effect */
+    transition: all 0.2s ease;
+    /* smooth animation */
 }
 
 /* Green button hover */
 .buttons .btn-green:hover {
-    background: #0080cc;        /* slightly darker blue */
-    color: #fff;                /* keep text white */
+    background: #0080cc;
+    /* slightly darker blue */
+    color: #fff;
+    /* keep text white */
     transform: scale(1.05);
     transition: all 0.2s ease;
 }
@@ -213,7 +237,7 @@ h2:hover {
 
 .exp-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
 }
 
@@ -236,7 +260,8 @@ h2:hover {
     height: 24px;
     margin-right: 5px;
     vertical-align: middle;
-    stroke: #ffffff; /* highlight blue */
+    stroke: #ffffff;
+    /* highlight blue */
 }
 
 .experience h2 {
@@ -250,7 +275,8 @@ h2:hover {
     height: 30px;
     margin-right: 1px;
     vertical-align: middle;
-    stroke: #ffffff; /* highlight blue */
+    stroke: #ffffff;
+    /* highlight blue */
 }
 
 .experience h2 {
@@ -288,39 +314,56 @@ h2:hover {
 
 .homelab-gallery img:hover {
     transform: scale(1.1);
-    border-color: #00A0FF; /* highlight blue */
+    border-color: #00A0FF;
+    /* highlight blue */
 }
 
 
 /*-----ANIMATION-----*/
 
 @keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
 }
 
 @keyframes spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 #hello-text.animate {
-  animation: bounce 0.6s ease;
-  color: #00A0FF; /* highlight blue for effect */
+    animation: bounce 0.6s ease;
+    color: #00A0FF;
+    /* highlight blue for effect */
 }
 
 #hello-text {
-  cursor: pointer;
-  transition: text-shadow 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+    transition: text-shadow 0.3s ease, color 0.3s ease;
 }
 
 #hello-text:hover {
-  color: #00A0FF; /* optional color shift */
-  text-shadow: 0 0 6px rgba(0, 160, 255, 0.7); /* subtle blue glow */
+    color: #00A0FF;
+    /* optional color shift */
+    text-shadow: 0 0 6px rgba(0, 160, 255, 0.7);
+    /* subtle blue glow */
 }
 
 #hello-text.animate {
-  cursor: crosshair; /* changes pointer while animation runs */
+    cursor: crosshair;
+    /* changes pointer while animation runs */
 }
 
 
