@@ -141,6 +141,19 @@ h2 span:hover {
     margin-bottom: 15px;
 }
 
+.pixelate {
+    transition: transform 0.4s ease, filter 0.4s ease;
+    cursor: pointer;
+}
+
+/* Hover pixelation effect */
+.pixelate:hover {
+    transform: scale(1.05); /* slight zoom */
+    image-rendering: pixelated;
+    filter: contrast(150%) saturate(120%);
+}
+
+
 /* ===========================
    SOCIAL LINKS
    =========================== */
@@ -239,6 +252,16 @@ h2 span:hover {
 
 .stats div {
     text-align: center;
+}
+
+.stat-link {
+    text-decoration: none;
+    color: inherit; /* keeps same styling */
+    transition: color 0.2s ease;
+}
+
+.stat-link:hover {
+    color: #00A0FF; /* highlight on hover */
 }
 
 /* ===========================
